@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+  --color-white: oklch(97.97% 0.0084 56.32);
+  --color-primary: oklch(80.28% 0.1494 65.89);
+  --color-primary-light: oklch(89.53% 0.0797 70.19);
+  --color-primary-dark: oklch(36.09% 0.083769 61.0655);
+  --color-accent: oklch(88.49% 0.1623 92.33);
+}
+
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply mt-4 text-lg text-center;
+  }
+  p {
+    @apply text-lg text-center;
+  }
+}
