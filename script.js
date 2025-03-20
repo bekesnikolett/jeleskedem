@@ -1,14 +1,28 @@
 // use a script tag or an external JS file
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
-  var tl = gsap.timeline();
-  //   var tl2 = gsap.timeline();
-  //   var tl3 = gsap.timeline();
-  //   tl.fromTo(
-  //     "#bekesnikolett",
-  //     { opacity: 0 },
-  //     { opacity: 1, delay: 3, duration: 3, yoyo: true, repeat: -1 }
-  //   );
 
-  //   tl.fromTo("body", { opacity: 0 }, { opacity: 1, duration: 1 });
+  var btnIntro = document.getElementById("intro-link");
+  btnIntro.addEventListener("mouseenter", () => {
+    gsap.to("#intro-bg", { top: 0, duration: 0.2 });
+    gsap.to("#intro-text-1", { top: "-1.5rem", duration: 0.3 });
+    gsap.to("#intro-text-2", { top: "0", duration: 0.3 });
+  });
+  btnIntro.addEventListener("mouseleave", () => {
+    gsap.to("#intro-bg", { top: "4rem", duration: 0.2 });
+    gsap.to("#intro-text-1", { top: "0", duration: 0.3 });
+    gsap.to("#intro-text-2", { top: "1.5rem", duration: 0.3 });
+  });
+
+  var btnPrices = document.getElementById("prices-link");
+  btnPrices.addEventListener("mouseenter", () => {
+    gsap.to("#prices-bg", { top: 0, duration: 0.2 });
+    gsap.to("#prices-text-1", { top: "-1.5rem", duration: 0.3 });
+    gsap.to("#prices-text-2", { top: "0", duration: 0.3 });
+  });
+  btnPrices.addEventListener("mouseleave", () => {
+    gsap.to("#prices-bg", { top: "4rem", duration: 0.2 });
+    gsap.to("#prices-text-1", { top: "0", duration: 0.3 });
+    gsap.to("#prices-text-2", { top: "1.5rem", duration: 0.3 });
+  });
 });

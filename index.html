@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call,mail"
+    />
     <link href="./output.css" rel="stylesheet" />
     <title>Békés Nikolett magántanár</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
@@ -19,28 +23,48 @@
     <nav class="h-16 text-base flex justify-center w-full shadow-sm">
       <div class="w-5xl flex justify-between">
         <div class="flex items-center">
-          <div class="flex items-center bg-primary h-full p-8">
+          <div class="flex items-center bg-primary h-full p-8 gap-2">
+            <span class="material-symbols-outlined">mail</span>
             bekes.nikolett@gmail.com
           </div>
-          <div class="flex items-center bg-primary-light h-full p-8">
+          <div class="flex items-center bg-primary-light h-full p-8 gap-2">
+            <span class="material-symbols-outlined">call</span>
             +36 30 512 4245
           </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center gap-2">
           <a href="#introduction" class="block h-full">
             <div
-              class="flex items-center justify-center bg-primary w-[160px] h-full"
-              id="introduction-link"
+              class="flex items-center justify-center bg-primary-light w-[160px] h-full relative"
+              id="intro-link"
             >
-              Bemutatkozás
+              <div
+                class="inset-0 top-16 bg-primary absolute"
+                id="intro-bg"
+              ></div>
+              <div class="overflow-hidden flex flex-col items-center relative">
+                <span class="z-20 relative" id="intro-text-1"
+                  >Bemutatkozás</span
+                >
+                <span class="z-10 absolute top-6" id="intro-text-2"
+                  >Bemutatkozás</span
+                >
+              </div>
             </div>
           </a>
           <a href="#prices" class="block h-full">
             <div
-              class="flex items-center justify-center bg-primary-light h-full w-[160px]"
+              class="flex items-center justify-center bg-primary-light h-full w-[160px] relative"
               id="prices-link"
             >
-              Árak
+              <div
+                class="inset-0 top-16 bg-primary absolute"
+                id="prices-bg"
+              ></div>
+              <div class="overflow-hidden flex flex-col items-center relative">
+                <span class="z-20 relative" id="prices-text-1">Árak</span>
+                <span class="z-10 absolute top-6" id="prices-text-2">Árak</span>
+              </div>
             </div>
           </a>
         </div>
@@ -138,15 +162,18 @@
           <div class="w-32 bg-primary h-1 mt-4 mb-32"></div>
           <div class="flex justify-end items-center gap-12 mt-8">
             <div
-              class="flex flex-col items-center bg-primary-light p-8 pt-32 rounded-3xl relative shadow-xl"
+              class="flex flex-col items-center bg-linear-to-br from-white to-primary-light from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
             >
               <div
-                class="bg-[url(/images/altsuli.jpg)] bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
+                class="bg-[url(/images/altsuli.jpg)] z-20 bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
               >
                 <div
                   class="absolute bg-primary inset-0 opacity-20 rounded-full"
                 ></div>
               </div>
+              <div
+                class="bg-white w-[220px] h-[220px] absolute rounded-full -top-[104px] z-10"
+              ></div>
               <h3 class="mb-6 uppercase font-semibold">Általános iskola</h3>
               <div class="felx flex-col items-center w-[250px]">
                 <h5>matematika, fizika, kémia</h5>
@@ -158,15 +185,18 @@
               </div>
             </div>
             <div
-              class="flex flex-col items-center bg-accent p-8 pt-32 rounded-3xl relative shadow-xl"
+              class="flex flex-col items-center bg-linear-to-br from-white to-accent from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
             >
               <div
-                class="bg-[url(/images/kozepsuli2.jpg)] bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
+                class="bg-[url(/images/kozepsuli2.jpg)] z-20 bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
               >
                 <div
                   class="absolute bg-primary inset-0 opacity-20 rounded-full"
                 ></div>
               </div>
+              <div
+                class="bg-white w-[220px] h-[220px] absolute rounded-full -top-[104px] z-10"
+              ></div>
               <h3 class="mb-6 uppercase font-semibold">Középiskola</h3>
               <div class="felx flex-col items-center w-[250px]">
                 <h5>matematika, fizika, kémia</h5>
@@ -178,15 +208,18 @@
               </div>
             </div>
             <div
-              class="flex flex-col items-center bg-primary p-8 pt-32 rounded-3xl relative shadow-xl"
+              class="flex flex-col items-center bg-linear-to-br from-white to-primary from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
             >
               <div
-                class="bg-[url(/images/felnott.jpg)] bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
+                class="bg-[url(/images/felnott.jpg)] z-20 bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
               >
                 <div
                   class="absolute bg-primary inset-0 opacity-20 rounded-full"
                 ></div>
               </div>
+              <div
+                class="bg-white w-[220px] h-[220px] absolute rounded-full -top-[104px] z-10"
+              ></div>
               <h3 class="mb-6 uppercase font-semibold">Felnőtt</h3>
               <div class="felx flex-col items-center w-[250px]">
                 <h5>matematika, fizika, kémia</h5>
@@ -204,10 +237,12 @@
     <footer
       class="flex items-center h-16 text-base justify-center w-full mt-24"
     >
-      <div class="flex items-center bg-primary h-full p-8">
+      <div class="flex items-center bg-primary h-full p-8 gap-2">
+        <span class="material-symbols-outlined">mail</span>
         bekes.nikolett@gmail.com
       </div>
-      <div class="flex items-center bg-primary-light h-full p-8">
+      <div class="flex items-center bg-primary-light h-full p-8 gap-2">
+        <span class="material-symbols-outlined">call</span>
         +36 30 512 4245
       </div>
     </footer>
