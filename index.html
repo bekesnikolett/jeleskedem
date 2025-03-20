@@ -20,20 +20,26 @@
   </head>
   <body class="font-bricolage bg-white text-primary-dark">
     <!-- NAVBAR -->
-    <nav class="h-16 text-base flex justify-center w-full shadow-sm">
-      <div class="w-5xl flex justify-between">
-        <div class="flex items-center">
-          <div class="flex items-center bg-primary h-full p-8 gap-2">
+    <nav class="h-22 sm:h-16 text-base flex justify-center w-full sm:shadow-sm">
+      <div class="md:w-5xl w-full flex justify-center md:justify-between">
+        <div
+          class="flex max-sm:flex-col justify-center items-center max-md:w-full"
+        >
+          <div
+            class="flex justify-center items-center bg-primary h-full w-full p-2 sm:p-8 gap-2"
+          >
             <span class="material-symbols-outlined">mail</span>
             bekes.nikolett@gmail.com
           </div>
-          <div class="flex items-center bg-primary-light h-full p-8 gap-2">
+          <div
+            class="flex items-center justify-center bg-primary-light h-full w-full p-2 sm:p-8 gap-2"
+          >
             <span class="material-symbols-outlined">call</span>
             +36 30 512 4245
           </div>
         </div>
         <div class="flex items-center gap-2">
-          <a href="#introduction" class="block h-full">
+          <a href="#introduction" class="block h-full max-lg:hidden">
             <div
               class="flex items-center justify-center bg-primary-light w-[160px] h-full relative"
               id="intro-link"
@@ -52,7 +58,7 @@
               </div>
             </div>
           </a>
-          <a href="#prices" class="block h-full">
+          <a href="#prices" class="block h-full max-md:hidden">
             <div
               class="flex items-center justify-center bg-primary-light h-full w-[160px] relative"
               id="prices-link"
@@ -72,13 +78,13 @@
     </nav>
     <main class="flex flex-col items-center">
       <!-- HERO -->
-      <section class="flex gap-24 pt-32" id="hero">
+      <section class="flex lg:gap-24 gap-4 pt-16 lg:pt-32" id="hero">
         <div
-          class="bg-[url(/images/Niki_Circle6.png)] bg-center bg-cover w-[400px] h-[400px]"
+          class="bg-[url(/images/Niki_Circle6.png)] bg-center bg-cover w-[400px] h-[400px] max-md:hidden"
         ></div>
         <div class="flex flex-col">
           <div>
-            <h1 class="mb-4 font-semibold" id="bekesnikolett">
+            <h1 class="mb-4 font-semibold max-md:text-4xl" id="bekesnikolett">
               Békés Nikolett Kyara
             </h1>
           </div>
@@ -105,15 +111,17 @@
       <!-- BEMUTATKOZAS -->
       <section
         id="introduction"
-        class="bg-linear-to-br from-primary-light to-primary from-0% to-70% w-full h-[800px] mt-24 flex"
+        class="bg-linear-to-br from-primary-light to-primary from-0% to-70% w-full md:h-[800px] mt-24 flex"
       >
         <!-- <div class="w-5xl flex items-center"> -->
         <div class="min-h-full w-2/5 overflow-hidden flex">
           <div
-            class="bg-[url(/images/bg_desk.jpg)] bg-cover bg-left-bottom w-[1200px] min-h-full shrink-0 grayscale-25"
+            class="bg-[url(/images/bg_desk.jpg)] bg-cover bg-left-bottom w-[1200px] min-h-full shrink-0 grayscale-25 max-md:hidden"
           ></div>
         </div>
-        <div class="p-12 h-full w-3xl shrink-0 flex flex-col items-center">
+        <div
+          class="p-12 h-full w-xl md:w-3xl sm:w-full shrink-0 flex flex-col items-center"
+        >
           <h2 class="text-center mb-8 uppercase font-bold">
             Kedves Érdeklődő!
           </h2>
@@ -138,7 +146,7 @@
             szemben, én pedig végig fogom a kezed, míg elérjük a kitűzött
             célodat.
           </p>
-          <div class="w-sm bg-primary-dark h-0.5 mt-12"></div>
+          <div class="sm:w-sm bg-primary-dark h-0.5 mt-12"></div>
           <h3 class="text-center mt-12 mb-2">
             Várlak sok szeretettel és kíváncsisággal óráim egyikén.
           </h3>
@@ -150,7 +158,7 @@
           class="min-h-full w-2/5 overflow-hidden flex items-end justify-end"
         >
           <div
-            class="bg-[url(/images/bg_desk.jpg)] bg-cover bg-left-bottom w-[1200px] min-h-full shrink-0 flex grayscale-25"
+            class="bg-[url(/images/bg_desk.jpg)] bg-cover bg-left-bottom w-[1200px] min-h-full shrink-0 flex grayscale-25 max-md:hidden"
           ></div>
         </div>
       </section>
@@ -160,9 +168,13 @@
         <div class="mt-24 flex flex-col items-center">
           <h2 class="uppercase font-bold">Árak</h2>
           <div class="w-32 bg-primary h-1 mt-4 mb-32"></div>
-          <div class="flex justify-end items-center gap-12 mt-8">
+          <div
+            id="prices-container"
+            class="flex justify-end items-center gap-12 mt-8"
+          >
             <div
-              class="flex flex-col items-center bg-linear-to-br from-white to-primary-light from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
+              id="altsuli-container"
+              class="h-[510px] flex flex-col items-center bg-linear-to-br from-white to-primary-light from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
             >
               <div
                 class="bg-[url(/images/altsuli.jpg)] z-20 bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
@@ -174,18 +186,21 @@
               <div
                 class="bg-white w-[220px] h-[220px] absolute rounded-full -top-[104px] z-10"
               ></div>
-              <h3 class="mb-6 uppercase font-semibold">Általános iskola</h3>
-              <div class="felx flex-col items-center w-[250px]">
+              <div class="flex items-center justify-center h-24">
+                <h3 class="uppercase font-semibold">Általános iskola</h3>
+              </div>
+              <div class="flex flex-col items-center w-[250px]">
                 <h5>matematika, fizika, kémia</h5>
-                <p>3500 Ft</p>
+                <p>3500 Ft / 60 perc</p>
                 <h5>irodalom/nyelvtan, történelem, biológia</h5>
-                <p>3000 Ft</p>
+                <p>3000 Ft / 60 perc</p>
                 <h5>angol, német</h5>
-                <p>4000 Ft</p>
+                <p>4000 Ft / 60 perc</p>
               </div>
             </div>
             <div
-              class="flex flex-col items-center bg-linear-to-br from-white to-accent from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
+              id="kozepsuli-container"
+              class="h-[510px] flex flex-col items-center bg-linear-to-br from-white to-accent from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
             >
               <div
                 class="bg-[url(/images/kozepsuli2.jpg)] z-20 bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
@@ -197,18 +212,21 @@
               <div
                 class="bg-white w-[220px] h-[220px] absolute rounded-full -top-[104px] z-10"
               ></div>
-              <h3 class="mb-6 uppercase font-semibold">Középiskola</h3>
-              <div class="felx flex-col items-center w-[250px]">
+              <div class="flex items-center justify-center h-24">
+                <h3 class="uppercase font-semibold">Középiskola</h3>
+              </div>
+              <div class="flex flex-col items-center w-[250px]">
                 <h5>matematika, fizika, kémia</h5>
-                <p>4500 Ft</p>
+                <p>4500 Ft / 60 perc</p>
                 <h5>irodalom/nyelvtan, történelem, biológia</h5>
-                <p>4000 Ft</p>
+                <p>4000 Ft / 60 perc</p>
                 <h5>angol, német</h5>
-                <p>5000 Ft</p>
+                <p>5000 Ft / 60 perc</p>
               </div>
             </div>
             <div
-              class="flex flex-col items-center bg-linear-to-br from-white to-primary from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
+              id="felnott-container"
+              class="h-[510px] flex flex-col items-center bg-linear-to-br from-white to-primary from-[-30%] to-80% p-8 pt-36 rounded-3xl relative shadow-xl"
             >
               <div
                 class="bg-[url(/images/felnott.jpg)] z-20 bg-center bg-cover w-[200px] h-[200px] rounded-full absolute -top-24 drop-shadow-xl"
@@ -220,14 +238,17 @@
               <div
                 class="bg-white w-[220px] h-[220px] absolute rounded-full -top-[104px] z-10"
               ></div>
-              <h3 class="mb-6 uppercase font-semibold">Felnőtt</h3>
-              <div class="felx flex-col items-center w-[250px]">
+              <h3 class="uppercase font-semibold">Felnőtt nyelvoktatás</h3>
+              <h3 class="mb-2 uppercase font-semibold">
+                Érettségi felkészítés
+              </h3>
+              <div class="flex flex-col items-center w-[250px]">
                 <h5>matematika, fizika, kémia</h5>
-                <p>5000 Ft</p>
+                <p>5000 Ft / 60 perc</p>
                 <h5>irodalom/nyelvtan, történelem, biológia</h5>
-                <p>4000 Ft</p>
+                <p>4000 Ft / 60 perc</p>
                 <h5>angol, német</h5>
-                <p>5000 Ft</p>
+                <p>5000 Ft / 60 perc</p>
               </div>
             </div>
           </div>
