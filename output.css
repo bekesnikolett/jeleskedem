@@ -531,6 +531,11 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
+  .max-sm\:w-full {
+    @media (width < 40rem) {
+      width: 100%;
+    }
+  }
   .max-sm\:flex-col {
     @media (width < 40rem) {
       flex-direction: column;
@@ -549,6 +554,11 @@
   .sm\:w-sm {
     @media (width >= 40rem) {
       width: var(--container-sm);
+    }
+  }
+  .sm\:shrink-0 {
+    @media (width >= 40rem) {
+      flex-shrink: 0;
     }
   }
   .sm\:p-8 {
